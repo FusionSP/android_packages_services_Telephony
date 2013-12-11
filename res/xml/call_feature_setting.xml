@@ -182,11 +182,17 @@
          </PreferenceScreen>
 
          <SwitchPreference
-                android:key="button_smart_dialer"
-                android:title="@string/smart_dialer_title"
-                android:summary="@string/smart_dialer_summary"
-                android:persistent="false"
-                android:defaultValue="false" />
+            android:key="button_smart_dialer"
+            android:title="@string/smart_dialer_title"
+            android:summary="@string/smart_dialer_summary"
+            android:persistent="false"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="button_proximity_key"
+            android:title="@string/proximity_mode_title"
+            android:persistent="false"
+            android:summary="@string/proximity_on_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
