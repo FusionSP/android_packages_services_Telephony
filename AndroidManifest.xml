@@ -313,7 +313,8 @@
         <activity android:name="NetworkSetting"
                 android:label="@string/networks"
                 android:configChanges="orientation|screenSize|keyboardHidden"
-                android:theme="@style/NetworkOperatorsSettingsTheme">
+                android:theme="@style/NetworkOperatorsSettingsTheme"
+                android:parentActivityName="MobileNetworkSettings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.NETWORK_OPERATOR_SETTINGS" />

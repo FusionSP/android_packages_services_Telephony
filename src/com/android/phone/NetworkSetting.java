@@ -16,6 +16,7 @@
 
 package com.android.phone;
 
+import android.app.ActionBar;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ComponentName;
@@ -38,6 +39,7 @@ import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
 import android.telephony.SubscriptionManager;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.util.Log;
 
 import com.android.internal.telephony.CommandException;
@@ -258,6 +260,11 @@ public class NetworkSetting extends PreferenceActivity
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        ActionBar mActionBar = getActionBar();
+        if (mActionBar != null) {
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         mUm = (UserManager) getSystemService(Context.USER_SERVICE);
 
         if (mUm.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS)) {
@@ -292,6 +299,15 @@ public class NetworkSetting extends PreferenceActivity
        if (isDataDisableRequired()) {
             mDataManager = new NetworkSettingDataManager(getApplicationContext());
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
     }
 
     @Override
