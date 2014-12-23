@@ -23,10 +23,6 @@
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">Do not connect to data services when nationally roaming</string>
 
-    <!-- Noise suppression -->
-    <string name="noise_suppression_title">Noise suppression</string>
-    <string name="noise_suppression_summary">Enable noise suppression for calls</string>
-
     <!-- Proximity speaker -->
     <string name="display_category_prox_auto_speaker_title">Proximity speaker settings</string>
     <string name="prox_auto_speaker_title">Automatic proximity speaker</string>
