@@ -27,4 +27,11 @@
     <string name="noise_suppression_title">Noise suppression</string>
     <string name="noise_suppression_summary">Enable noise suppression for calls</string>
 
+    <!-- Proximity speaker -->
+    <string name="display_category_prox_auto_speaker_title">Proximity speaker settings</string>
+    <string name="prox_auto_speaker_title">Automatic proximity speaker</string>
+    <string name="prox_auto_speaker_summary">Enable speakerphone when the device is removed from your face</string>
+    <string name="prox_auto_speaker_incall_only_title">Only while in call</string>
+    <string name="prox_auto_speaker_incall_only_summary">Proximity sensor toggles speaker, but not while ringing</string>
+
 </resources>

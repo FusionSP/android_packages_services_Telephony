@@ -210,4 +210,26 @@
                  android:targetClass="com.android.settings.Settings$BlacklistSettingsActivity" />
          </PreferenceScreen>
     </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="category_prox_auto_speaker"
+            android:title="@string/display_category_prox_auto_speaker_title" >
+
+        <CheckBoxPreference
+            android:key="prox_auto_speaker"
+            android:title="@string/prox_auto_speaker_title"
+            android:summary="@string/prox_auto_speaker_summary"
+            android:persistent="false"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="prox_auto_speaker_incall_only"
+            android:title="@string/prox_auto_speaker_incall_only_title"
+            android:summary="@string/prox_auto_speaker_incall_only_summary"
+            android:persistent="false"
+            android:defaultValue="false"
+            android:dependency="prox_auto_speaker" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
