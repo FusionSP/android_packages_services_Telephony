@@ -1,10 +1,12 @@
 package com.android.phone;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -57,7 +59,7 @@ public class GsmUmtsAdditionalCallOptions extends
 
             mCLIRButton.init(this, true, mPhoneId);
             mCWButton.init(this, true, mPhoneId);
-            mMSISDNButton.init(this, true);
+            mMSISDNButton.init(this, true, mPhoneId);
 
             int[] clirArray = icicle.getIntArray(mCLIRButton.getKey());
             if (clirArray != null) {
@@ -93,7 +95,7 @@ public class GsmUmtsAdditionalCallOptions extends
             if (pref instanceof CallWaitingSwitchPreference) {
                 ((CallWaitingSwitchPreference) pref).init(this, false, mPhoneId);
             } else if (pref instanceof MSISDNEditPreference) {
-                ((MSISDNEditPreference) pref).init(this, false);
+                ((MSISDNEditPreference) pref).init(this, false, mPhoneId);
             }
         }
         super.onFinished(preference, reading);
