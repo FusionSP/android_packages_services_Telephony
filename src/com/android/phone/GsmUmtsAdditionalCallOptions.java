@@ -53,6 +53,7 @@ public class GsmUmtsAdditionalCallOptions extends
         if (icicle == null) {
             if (DBG) Log.d(LOG_TAG, "start to init ");
             mCLIRButton.init(this, false, mPhoneId);
+            mMSISDNButton.init(this, false, mPhoneId);
         } else {
             if (DBG) Log.d(LOG_TAG, "restore stored states");
             mInitIndex = mPreferences.size();
