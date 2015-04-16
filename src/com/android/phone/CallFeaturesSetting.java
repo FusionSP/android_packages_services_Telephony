@@ -194,6 +194,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_VIDEO_CALL_FB_KEY = "videocall_setting_fb_key";
     private static final String BUTTON_VIDEO_CALL_FW_KEY = "videocall_setting_fw_key";
     private static final String BUTTON_VIDEO_CALL_SP_KEY = "vt_imageplacer";
+    private static final String BUTTON_VIDEO_CALL_SWITCH = "button_enable_video_calling";
 
     private static final String PROX_AUTO_SPEAKER  = "prox_auto_speaker";
     private static final String PROX_AUTO_SPEAKER_DELAY  = "prox_auto_speaker_delay";
@@ -267,6 +268,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private PreferenceScreen mButtonVideoCallFallback;
     private PreferenceScreen mButtonVideoCallForward;
     private PreferenceScreen mButtonVideoCallPictureSelect;
+    private Preference mVideoCallPreference;
 
     // Smart Calls
     private static final String BUTTON_SMART_DIALER_KEY = "button_smart_dialer";
@@ -1738,6 +1740,11 @@ public class CallFeaturesSetting extends PreferenceActivity
             mButtonVideoCallForward = (PreferenceScreen) findPreference(BUTTON_VIDEO_CALL_FW_KEY);
             mButtonVideoCallPictureSelect = (PreferenceScreen)
                     findPreference(BUTTON_VIDEO_CALL_SP_KEY);
+        } else {
+            mVideoCallPreference = findPreference(BUTTON_VIDEO_CALL_SWITCH);
+            if (mVideoCallPreference != null) {
+                prefSet.removePreference(mVideoCallPreference);
+            }
         }
 
         mMwiNotification = (SwitchPreference) findPreference(BUTTON_MWI_NOTIFICATION_KEY);
