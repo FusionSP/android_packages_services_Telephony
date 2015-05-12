@@ -346,4 +346,6 @@
      <!-- Smart Call -->
     <string name="smart_dialer_title">Smart Call</string>
     <string name="smart_dialer_summary">Automatically call the contact by putting device near your ear</string>
+
+    <string name="msim_mobile_network_settings_title">SIM %d mobile network settings</string>
 </resources>
